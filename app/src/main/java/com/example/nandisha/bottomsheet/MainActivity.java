@@ -10,6 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -23,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        final WebView webView = (WebView) findViewById(R.id.webview);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("about:blank");
+        webView.loadUrl("http://www.amazon.in");
         View fab = findViewById(R.id.bottom_sheet);
         final BottomSheetBehavior behavior = BottomSheetBehavior.from(fab);
         Button button = (Button)findViewById(R.id.buttonToExpand);

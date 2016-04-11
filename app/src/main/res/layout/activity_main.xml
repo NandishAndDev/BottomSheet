@@ -32,6 +32,13 @@
         android:id="@+id/buttonToCollapse"
         android:layout_alignTop="@+id/buttonToExpand"
         android:layout_toEndOf="@+id/buttonToExpand" />
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/webview"
+        android:layout_below="@+id/buttonToExpand"
+        android:layout_alignParentBottom="true">
+    </WebView>
 
     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -40,6 +47,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.nandisha.bottomsheet.MainActivity"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
 
